@@ -75,17 +75,16 @@ nav ul li {
 }
 
 
-nav ul ul li {
-    display: block;
-
     nav ul ul {
         position: absolute;
         display: none;
-        text-decoration: none;
+        
+        li {
+            display: block;
 
     }
-}
 
+    }
 .opcion__menu:hover {
     border-radius: 5px;
     box-shadow: 5px 5px 10px map-get(c.$colores, "texto");
@@ -110,13 +109,12 @@ ul {
 #formu {
     width: 500px;
     margin: 0 auto;
-}
 
-@media only screen and (max-width: 700px) {
-    #formu {
+    @media only screen and (max-width: 700px){
         width: 90%;
     }
 }
+
 
 /* Video menu */
 .video__yt {
@@ -193,6 +191,4 @@ table tr td {
         border-radius: 75%;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
     }
-
-
 }
