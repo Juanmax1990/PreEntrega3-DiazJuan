@@ -1,0 +1,198 @@
+@use '_commons' as c;
+
+* {
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+head {
+    position: relative;
+}
+
+.logo {
+    width: 90%;
+}
+
+header h1 {
+
+    position: relative;
+    animation: muevete 3s infinite;
+}
+
+@keyframes muevete {
+
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 10px;
+    }
+
+    100% {
+        top: 15px;
+    }
+
+}
+
+body {
+
+    background-color: map-get(c.$colores, "fondo");
+
+}
+
+p {
+    color: map-get(c.$colores, "texto");
+
+}
+
+
+
+#menu {
+    background-color: map-get(c.$colores, "footer");
+
+}
+
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+
+    a {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        color: map-get(c.$colores, "menu");
+
+        &:hover {
+            color: red;
+
+        }
+    }
+
+}
+
+
+nav ul ul li {
+    display: block;
+
+    nav ul ul {
+        position: absolute;
+        display: none;
+        text-decoration: none;
+
+    }
+}
+
+.opcion__menu:hover {
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px map-get(c.$colores, "texto");
+    text-decoration: none;
+
+}
+
+.info__club {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    text-align: center;
+
+
+}
+
+ul {
+
+    list-style: none;
+}
+
+#formu {
+    width: 500px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 700px) {
+    #formu {
+        width: 90%;
+    }
+}
+
+/* Video menu */
+.video__yt {
+    width: 90%;
+
+}
+
+@media only screen and (min-width: 700px) {
+    .logo {
+        width: 30%;
+    }
+
+    .video__yt {
+        width: 50%;
+        height: 500px;
+    }
+}
+
+/* Sobrenosotros*/
+#fotostennis {
+    width: 60%;
+    margin-left: 20%;
+
+}
+
+.d-block {
+    border-radius: 15px;
+}
+
+/*Tienda*/
+
+table {
+
+    display: inline-block
+}
+
+table tr th {
+
+    width: 250px;
+    height: 50px;
+    color: map-get(c.$colores, "tabla");
+}
+
+table tr td {
+
+    width: 250px;
+    height: 100px;
+    color: map-get(c.$colores, "tabla");
+}
+
+@media only screen and (max-width: 400px) {
+    table {
+        width: 11%;
+        display: block;
+    }
+
+}
+
+//social
+
+.buttons {
+    min-width: 480px;
+    display: flex;
+    justify-content: left;
+
+    a {
+        text-decoration: none;
+        font-size: 12px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        color: map-get(c.$colores, "menu");
+        border-radius: 75%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    }
+
+
+}

@@ -1,0 +1,10 @@
+@use '_commons' as d;
+
+footer{
+
+    p{
+        background-color:map-get(d.$colores,"footer");
+        color:map-get(d.$colores,"textofooter");
+    }
+} 
+
